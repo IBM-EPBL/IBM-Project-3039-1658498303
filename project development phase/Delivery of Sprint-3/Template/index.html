@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Imaga Upload</title>
+</head>
+<body>
+    <h1 align="center">Image Classifier</h1>
+    <form actiom='/' , method="post" enctype="multipart/form-data">
+        <input type="file" name="imagefile" />
+        <input type="submit" value="predict Image" />
+    </form>
+    {% if prediction %}
+    <p align="center">Image is a {{prediction}}</p>
+    <p align="center">{{prediction}} is a {{calories}}</p>
+    <p align="center">{{prediction}} is a {{protein}}</p>
+    <p align="center">{{prediction}} is a {{fat}}</p>
+    
+    <p align="center">{{prediction}} is a {{fibre}}</p>
+    {% endif %}
+</body>
+</html>
