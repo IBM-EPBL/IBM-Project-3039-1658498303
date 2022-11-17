@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>NutriPure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+
+    <body background="{{ url_for('static', filename='images/bg6.jpg') }}"style="min-height: 100vh; 
+                            width: 100%;  
+                            background-position: center; 
+                            background-size: cover; 
+                            position: relative; 
+                            -moz-filter:blur(10px);">
+        <div id="banner">
+
+            <center> <h1>IMAGE CLASSIFIER</h1></center>
+            <form class="form-container" id="file" action='/' , method="post" enctype="multipart/form-data">
+                <input style="padding: 10px;color:#fff; width: 500px; letter-spacing: 2px; height: 50px;font-family: Arial,sans-serif; font-size: 25px; " type="file" name="imagefile" accept="image/gif, image/jpeg, image/png" onchange="loadFile(event)" /> <br />
+                <br />
+                <br />
+                <br />
+                <input id="btn" style="background-color:crimson;width:200px;height:50px;font-family:Arial,sans-serif;color:white;font-size:23px;border:1px solid crimson; border-radius:70px;" type="submit" value="Predict value" onclick="Openform();" />
+            </form>
+
+            {% if prediction %}
+            <form id="content" style="display: none " class="form-box" action="/predict" enctype="multipart/form-data">
+                <p style="text-align:center"><img id="output" width="200" /></p>
+                <h1 style="text-align: center; color: white; text-shadow: 2px 0 15px #292929; letter-spacing: 2px; font-size: 15px">Image is a {{prediction}}</h1>
+                <p style="text-align: center; color: white; text-shadow: 2px 0 15px #292929; letter-spacing: 2px; font-size: 15px">Calories    = {{calories}}</p>
+                <p style="text-align: center; color: white; text-shadow: 2px 0 15px #292929; letter-spacing: 2px; font-size: 15px ">Protein     = {{protein}}</p>
+                <p style="text-align: center; color: white; text-shadow: 2px 0 15px #292929; letter-spacing: 2px; font-size: 15px ">Fat         = {{fat}}</p>
+                <p style="text-align: center; color: white; text-shadow: 2px 0 15px #292929; letter-spacing: 2px; font-size: 15px ">Fibre       = {{fibre}}</p>
+                <p style="text-align: center; color: white; text-shadow: 2px 0 15px #292929; letter-spacing: 2px; font-size: 15px ">cholesterol = {{cholesterol}}</p>
+                <p style="text-align: center; color: white; text-shadow: 2px 0 15px #292929; letter-spacing: 2px; font-size: 15px ">Sodium      = {{sodium}}</p>
+                <p style="text-align: center; color: white; text-shadow: 2px 0 15px #292929; letter-spacing: 2px; font-size: 15px ">Potassium      = {{potassium}}</p>
+
+
+            </form>
+                {% endif %}
+            
+            <script>
+                function Openform() {
+                    alert("predicting!");
+                    document.getElementById('content').style.display = 'block';
+                }
+                var loadFile = function (event) {
+                    var image = document.getElementById('output');
+                    image.src = URL.createObjectURL(event.target.files[0]);
+                };
+            </script>
+        </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿h1 {
+    color: #fff;
+    font-size: 50px;
+    margin-top: 0;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 0 15px #292929;
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+.form-container {
+    margin-left: 50px;
+    padding: 20px;
+}
+#file{
+    left:50px;
+}
+
+.form-box {
+    background: #292929;
+    margin: auto;
+    margin-top: 80px;
+    margin-left: 420px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 480px;
+    
+}
+#content{
+    left:70px;
+}
+
+
+
+  
+
