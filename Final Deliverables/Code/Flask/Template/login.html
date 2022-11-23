@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NutriPure</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    
+</head>
+<body>
+    
+    <div class="hero">
+        <a id="logo" style=" width:50px; margin: 20px auto; position: absolute;left: 50px; margin-top: 0;" href="index.html"><img src="../static/Images/logo.png" alt=""></a>
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="../static/Images/fb.png" alt="">
+                <img src="../static/Images/tw.png" alt="">
+                <img src="../static/Images/gp.png" alt="">
+            </div>
+            <form name="myform1" id="login" action=""  class="input-group">
+                <label for="">User Id</label>
+                <input type="text" name="uname" class="input-field" required><br>
+                <label for="">Enter Password</label>
+                <input type="password" name="upswd" class="input-field" required>
+                <input type="checkbox" class="chech-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn" onclick="newpage()">Log in</button>
+            </form>
+            <form name="myform2" id="register" action="" method="post" class="input-group">
+                <label for="">User Id</label>
+                <input type="text" name="uname1" class="input-field"  required><br>
+                <label for="">Email Id</label>
+                <input type="email" name="email" class="input-field" required><br>
+                <label for="">Enter Password</label>
+                <input type="password" name="upswd1" class="input-field"  required>
+                <br><br>
+                <button type="submit" class="submit-btn" onclick="newpage()">Register</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z= document.getElementById("btn");
+
+        function register()
+        {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login()
+        {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+        function newpage()
+        {
+            <a href='/'>LOGIN</a>
+
+        }
+    </script>
+    
+</body>
+</html>
