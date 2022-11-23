@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:  'Poppins', sans-serif;
+    box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../static/Images/bg5.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img {
+    width: 200px;
+    position: absolute;
+    top: 0%;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+    margin-top: 40px;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    
+}
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: crimson;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    text-align: center;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+   
+}
+
+.text-box h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+
+.text-box h1:nth-child(1) {
+    animation-delay: 1s;
+}
+.text-box h1:nth-child(2) {
+    animation-delay: 2s;
+}
+.text-box h1:nth-child(3) {
+    animation-delay: 3s;
+}                            /* for text reveal */
+
+.text-box h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;                    /* code for text reveal */
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+
+.text-box h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+.text-box h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+.text-box h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }                      /* text reveal code */
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}    
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    margin-right: 50%;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.hero-btn:hover {
+    border: 1px solid #9c4411;
+    background: crimson;
+    transition: 1s;
+}
+.hero {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../static/Images/nutrition.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: rgb(141, 136, 136);
+    padding: 5px;
+    overflow: hidden;
+}
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icons img{
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    color: #fff;
+}
+.input-field{
+    width: 100%;
+    padding: 5px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.chech-box{
+    margin: 30px 10px 30px 0;
+}
+span{
+    color: #fff;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+
+}
+#login{
+    left: 50px;
+}
+#register{
+    left: 450px;
+}
+.content{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../static/Images/bg7.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.content-box
+{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 50px;
+    color: rgb(171, 162, 162);
+}
+.content-box h1 {
+    padding: 40px;
+    color: #fff;
+    font-size: 3rem;
+}
+.content-box p {
+    line-height: 30px;
+    font-size: 20px;
+    padding: 30px;
+}
+/* ----footer----- */
+
+.footer {
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
+    padding: 30px ;
+    color: #fff;
+}
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    padding: 50px;
+}
+.footer p {
+    padding: 20px;
+}
+.icons .fa {
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.fa-heart-o {
+    color: #f44336;
+}
